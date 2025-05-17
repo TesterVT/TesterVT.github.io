@@ -3,167 +3,140 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #121212; /* тёмный фон */
+    color: #e0e0e0; /* светлый текст */
 }
 
 header {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #1f1f1f;
+    color: #ff7f50;
     padding: 2rem 1rem;
     text-align: center;
     border-radius: 10px;
     margin-bottom: 2rem;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
 nav {
-    background-color: white;
+    background-color: #1a1a1a;
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.search-container {
-    max-width: 600px;
-    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 input[type="text"] {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    outline: none;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 2px solid #444;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
 }
 
 input[type="text"]:focus {
-    border-color: #3498db;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
+    border-color: #ff7f50;
 }
 
 .commands-section {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(255, 127, 80, 0.1);
 }
 
 .commands-section h2 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
+    color: #ffa07a;
 }
 
 .command-card {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    transition: transform 0.2s;
+    background-color: #1f1f1f;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .command-card:hover {
-    transform: translateY(-2px);
-}
-
-.subcommands {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #e9ecef;
-    border-radius: 5px;
-}
-
-.subcommands h4 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.subcommand {
-    background-color: #ffffff;
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
-    border-radius: 3px;
-    border: 1px solid #dee2e6;
-}
-
-.subcommand-name {
-    color: #2c3e50;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-}
-
-.subcommand-description {
-    color: #666;
-    margin-bottom: 0.3rem;
-}
-
-.subcommand-usage {
-    background-color: #f1f8ff;
-    padding: 0.3rem 0.5rem;
-    border-radius: 3px;
-    font-family: 'Courier New', monospace;
-    color: #2c3e50;
-    margin-bottom: 0.3rem;
-}
-
-.subcommand-perms {
-    color: #e74c3c;
-    font-size: 0.8rem;
-    margin-top: 0.3rem;
+    background-color: #2b2b2b;
 }
 
 .command-name {
-    color: #2c3e50;
+    font-size: 1.2rem;
+    color: #ff9966;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .command-description {
-    color: #666;
+    color: #cccccc;
+    font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
 .command-usage {
-    background-color: #f1f8ff;
-    padding: 0.5rem;
-    border-radius: 3px;
+    background-color: #2e3b4e;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    color: #ffffff;
     font-family: 'Courier New', monospace;
-    color: #2c3e50;
+    font-size: 0.9rem;
+    display: inline-block;
 }
 
 .command-perms {
-    color: #e74c3c;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    color: #e57373;
     margin-top: 0.5rem;
 }
 
-footer {
-    text-align: center;
+/* Подкоманды */
+.subcommands {
+    margin-top: 1rem;
     padding: 1rem;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 2rem;
-    border-radius: 5px;
+    background-color: #262626;
+    border-left: 3px solid #ff7f50;
+    border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    main {
-        padding: 0 1rem;
-    }
+.subcommands h4 {
+    color: #ffa07a;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.subcommand {
+    background-color: #1a1a1a;
+    padding: 0.8rem;
+    margin-bottom: 0.7rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.subcommand-name {
+    color: #ffcc99;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.subcommand-description {
+    color: #bbbbbb;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.subcommand-usage {
+    background-color: #314760;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.subcommand-perms {
+    color: #ff6961;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
 }
